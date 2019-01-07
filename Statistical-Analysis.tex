@@ -1,0 +1,477 @@
+% This is "sig-alternate.tex" V2.1 April 2013
+% This file should be compiled with V2.5 of "sig-alternate.cls" May 2012
+%
+% This example file demonstrates the use of the 'sig-alternate.cls'
+% V2.5 LaTeX2e document class file. It is for those submitting
+% articles to ACM Conference Proceedings WHO DO NOT WISH TO
+% STRICTLY ADHERE TO THE SIGS (PUBS-BOARD-ENDORSED) STYLE.
+% The 'sig-alternate.cls' file will produce a similar-looking,
+% albeit, 'tighter' paper resulting in, invariably, fewer pages.
+%
+% ----------------------------------------------------------------------------------------------------------------
+% This .tex file (and associated .cls V2.5) produces:
+%       1) The Permission Statement
+%       2) The Conference (location) Info information
+%       3) The Copyright Line with ACM data
+%       4) NO page numbers
+%
+% as against the acm_proc_article-sp.cls file which
+% DOES NOT produce 1) thru' 3) above.
+%
+% Using 'sig-alternate.cls' you have control, however, from within
+% the source .tex file, over both the CopyrightYear
+% (defaulted to 200X) and the ACM Copyright Data
+% (defaulted to X-XXXXX-XX-X/XX/XX).
+% e.g.
+% \CopyrightYear{2007} will cause 2007 to appear in the copyright line.
+% \crdata{0-12345-67-8/90/12} will cause 0-12345-67-8/90/12 to appear in the copyright line.
+%
+% ---------------------------------------------------------------------------------------------------------------
+% This .tex source is an example which *does* use
+% the .bib file (from which the .bbl file % is produced).
+% REMEMBER HOWEVER: After having produced the .bbl file,
+% and prior to final submission, you *NEED* to 'insert'
+% your .bbl file into your source .tex file so as to provide
+% ONE 'self-contained' source file.
+%
+% ================= IF YOU HAVE QUESTIONS =======================
+% Questions regarding the SIGS styles, SIGS policies and
+% procedures, Conferences etc. should be sent to
+% Adrienne Griscti (griscti@acm.org)
+%
+% Technical questions _only_ to
+% Gerald Murray (murray@hq.acm.org)
+% ===============================================================
+%
+% For tracking purposes - this is V2.0 - May 2012
+
+\documentclass{sig-alternate-05-2015}
+
+
+\begin{document}
+
+% Copyright
+\setcopyright{acmcopyright}
+%\setcopyright{acmlicensed}
+%\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+
+
+% DOI
+\doi{...}
+
+% ISBN
+\isbn{...}
+
+%Conference
+\conferenceinfo{ACM KDD ODD 4.0}{San Francisco, CA, USA}
+
+\acmPrice{\$...}
+
+%
+% --- Author Metadata here ---
+\conferenceinfo{ACM KDD ODD 4.0}{San Francisco, CA, USA}
+%\CopyrightYear{2007} % Allows default copyright year (20XX) to be over-ridden - IF NEED BE.
+%\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
+% --- End of Author Metadata ---
+
+\title{Do We Present the Same What We Publish? Answering with a Statistical Contrast Mining Approach}
+%\subtitle{[Extended Abstract]
+%\titlenote{A full version of this paper is available as \textit{Author's Guide to Preparing ACM SIG Proceedings Using
+%\LaTeX$2_\epsilon$\ and BibTeX} at \texttt{www.acm.org/eaddress.htm}}}
+%
+% You need the command \numberofauthors to handle the 'placement
+% and alignment' of the authors beneath the title.
+%
+% For aesthetic reasons, we recommend 'three authors at a time'
+% i.e. three 'name/affiliation blocks' be placed beneath the title.
+%
+% NOTE: You are NOT restricted in how many 'rows' of
+% "name/affiliations" may appear. We just ask that you restrict
+% the number of 'columns' to three.
+%
+% Because of the available 'opening page real-estate'
+% we ask you to refrain from putting more than six authors
+% (two rows with three columns) beneath the article title.
+% More than six makes the first-page appear very cluttered indeed.
+%
+% Use the \alignauthor commands to handle the names
+% and affiliations for an 'aesthetic maximum' of six authors.
+% Add names, affiliations, addresses for
+% the seventh etc. author(s) as the argument for the
+% \additionalauthors command.
+% These 'additional authors' will be output/set for you
+% without further effort on your part as the last section in
+% the body of your article BEFORE References or any Appendices.
+
+\numberofauthors{4} %  in this sample file, there are a *total*
+% of EIGHT authors. SIX appear on the 'first-page' (for formatting
+% reasons) and the remaining two appear in the \additionalauthors section.
+%
+\author{
+% You can go ahead and credit any number of authors here,
+% e.g. one 'row of three' or two rows (consisting of one row of three
+% and a second row of one, two or three).
+%
+% The command \alignauthor (no curly braces needed) should
+% precede each author name, affiliation/snail-mail address and
+% e-mail address. Additionally, tag each line of
+% affiliation/address with \affaddr, and tag the
+% e-mail address with \email.
+%
+% 1st. author
+\alignauthor Chandrima Bhattacharya\\
+       \affaddr{Department of IT}\\
+       \affaddr{Indian Institute of Engineering Science and Technology, Shibpur}\\
+       \affaddr{Howrah -- 711103, India}
+% 2nd. author
+\alignauthor Rajat Kumar Agarwal\\
+       \affaddr{Department of IT}\\
+       \affaddr{Indian Institute of Engineering Science and Technology, Shibpur}\\
+       \affaddr{Howrah -- 711103, India}\\
+\and  % use '\and' if you need 'another row' of author names
+% 3rd. author
+\alignauthor Goutam Debnath\\
+       \affaddr{Department of IT}\\
+       \affaddr{Indian Institute of Engineering Science and Technology, Shibpur}\\
+       \affaddr{Howrah -- 711103, India}
+% 4th. author
+\alignauthor Malay Bhattacharyya\titlenote{The correspondence should be made to malaybhattacharyya@it.iiests.ac.in.}\\
+       \affaddr{Department of IT}\\
+       \affaddr{Indian Institute of Engineering Science and Technology, Shibpur}\\
+       \affaddr{Howrah -- 711103, India}
+}
+% There's nothing stopping you putting the seventh, eighth, etc.
+% author on the opening page (as the 'third row') but we ask,
+% for aesthetic reasons that you place these 'additional authors'
+% in the \additional authors block, viz.
+%\additionalauthors{Additional authors: John Smith (The Th{\o}rv{\"a}ld Group,
+%email: {\texttt{jsmith@affiliation.org}}) and Julius P.~Kumquat
+%(The Kumquat Consortium, email: {\texttt{jpkumquat@consortium.net}}).}
+%\date{30 July 1999}
+% Just remember to make sure that the TOTAL number of authors
+% is the number that will appear on the first page PLUS the
+% number that will appear in the \additionalauthors section.
+
+\maketitle
+
+\begin{abstract}
+There is a general tendency of publishing research as a paper and then presenting it in some conferences. The paper published, the slide carried to be presented and what the speaker actually speaks in the conference if noticed carefully sometimes tends to differ in weightage. Now there happen to be some topics which are more stressed upon. Here in this paper, we try to find the relationship between the paper published, and a Conference presentation on that paper (both what is prepared as a slide as well as what is spoken) to understand the psychological behaviour of a person who is presenting a paper.
+\end{abstract}
+
+
+%
+% The code below should be generated by the tool at
+% http://dl.acm.org/ccs.cfm
+% Please copy and paste the code instead of the example below.
+%
+\begin{CCSXML}
+<ccs2012>
+ <concept>
+  <concept_id>10010520.10010553.10010562</concept_id>
+  <concept_desc>Computer systems organization~Embedded systems</concept_desc>
+  <concept_significance>500</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10010520.10010575.10010755</concept_id>
+  <concept_desc>Computer systems organization~Redundancy</concept_desc>
+  <concept_significance>300</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10010520.10010553.10010554</concept_id>
+  <concept_desc>Computer systems organization~Robotics</concept_desc>
+  <concept_significance>100</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10003033.10003083.10003095</concept_id>
+  <concept_desc>Networks~Network reliability</concept_desc>
+  <concept_significance>100</concept_significance>
+ </concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Computer systems organization~Embedded systems}
+\ccsdesc[300]{Computer systems organization~Redundancy}
+\ccsdesc{Computer systems organization~Robotics}
+\ccsdesc[100]{Networks~Network reliability}
+
+
+%
+% End generated code
+%
+
+%
+%  Use this command to print the description
+%
+\printccsdesc
+
+% We no longer use \terms command
+%\terms{Theory}
+
+\keywords{Contrast mining; word cloud; research publication}
+
+
+
+
+\section{Introduction}
+According to the Oxford Dictionary, research is “The systematic investigation into and study of materials and sources to establish facts and reach new conclusions”. Hence we can conclude that any systematic investigation is a type of research. Now with such a broad definition, we have enormous amount of new researches on different fields going on. With the prodigious amount of research going on, we find there is an inclination towards publishing the researches.
+
+Research is published as literature, or presented in Conferences. The idea behind the research can also be protected as a patent. Now there is a global fashion of publishing researches in journals, or trying to present an idea in a Conference. The society considers paper publication as a merit which is leading the whole concept of research turning to be a craze amongst young researchers. The whole craze of research publication has led to unethical norms used to get papers published. We find that in the new age people send the same materials to be published in multiple journals simultaneously, new journals opening which instead charge the person who is trying to publish the materials.
+
+After research is done, and after getting published, it can also are presented in conferences. Now a very interesting question is that is the research that is published as a literature is same as that which is presented in a conference? What are the psychological thoughts behind delivering the same research content in different medium? Are all the topics from the paper taken up while giving a speech on it? Does the slide for the presented at the Conference contain a brief overview of all the topic? With that motivation, we start our project to find the similarities between the research that is published, the presentation made for the conferences, and what is spoken during the conference.
+
+
+
+
+
+\section{Motivation}
+With changing time, we see people more interested into data analysis. Contrast mining is a new field of learning similarities and differences between related groups with the help of reverse engineering techniques. We have used the concepts of contrast mining and tried to find out the relationship between the three kinds of data – the literature published, a conference power point presentation and what is spoken during the conference.
+This given work is based on Contrast mining. The three sets taken for the project, namely the paper published, the slide prepared and the way it is explained, forms a contrast set. A contrast sets can be defined as a conjunction of attributes or values that meaningfully in its distribution across different groups. Now given the data sets, we can detect the differences between contrasting groups. This approach is referred as contrast mining. This is a new field in data mining where we try to find the differences of a contrast set. This ... is explained in Fig.~\ref{Figure:Motivation}.
+
+\begin{figure}
+\centering
+\includegraphics[height=1.8in]{Motivation.eps}
+\caption{The three form of datasets available for contrast mining.}\label{Figure:Motivation}
+\end{figure}
+
+
+
+
+\section{Dataset Collection}
+The International Conference on Intelligent System for Molecular Biology (ISMB) maintains a database of the slides and presentation videos for the corresponding published papers. We took ten papers to make our dataset. Hence our dataset consists of three materials: the paper, i.e., the published literature, the conference talk and the slide presented during the conference. We have a total 30 articles for the comparative analysis, consisting of 3 sets of data for each set. The details about the dataset are provided in Table~\ref{Table:Dataset}.
+
+We have excluded diagrams, graphs, chart, bar graphs, tables, etc. while dataset collection, but have kept the description and captions along with it.
+
+Crowdsourcing techniques have been used to convert the datasets. Parts of the video has been shared to be converted to data vector.
+
+\begin{table*}
+\centering
+\caption{Dataset details. Here we have mentioned the speaker for the conference on the given topic.}
+\begin{tabular}{|c|l|l|}
+\hline
+\textbf{Serial No.} & \textbf{Paper Title} & \textbf{Presenter} \\\hline
+\hline
+1 & GenomeRing: Alignment visualization based on SuperGenome Coordinates & Alexander Herbig \\\hline
+2 & Fast Alignment of fragmentation tree  & Franziska Hufsky \\\hline
+3 & Towards 3D structure prediction of large RNA molecules: An integer & Vladimir Reinharz \\
+ & programming framework to insert local 3D motifs in RNA secondary structure  &  \\\hline
+4 & Leveraging Input and Output structures for joint mapping of & Seunghak Lee \\
+ & Epistatic and Marginal eQTLs &  \\\hline
+5 & Incorporating prior Information into Association Studies & Gregory Darnell  \\\hline
+6 & Matching experiments across species using expression values & Aaron Wise \\
+ & and textual information &  \\\hline
+7 & Dactal- divide and conquer trees (almost) without alignments  & Serita Nelesen \\\hline
+8 & Efficient Algorithm for recollection problem with gene duplication, & Mukul S. Bansal \\
+ & horizontal transfer and loss &  \\\hline
+9 & MoRFpred, a computational tool for sequence based prediction and & Fatemeh Miri Disfani \\
+ & characterization of disorder-to-order transitioning binding sites in protein &  \\\hline
+10 & A single-source k shortest paths algorithm to infer regulatory pathway & Yu-Keng Shih \\
+ & in a gene network &  \\\hline
+
+\end{tabular}\label{Table:Dataset}
+\end{table*}
+
+
+
+
+\section{Methods}
+We have taken the data collected and removed the stop words. The data without the stop words comprises of our data vectors for analysis.
+We have selected TagCrowd and have created the tag crowd for each dataset to visualize the crowd and the frequency of each. We have kept the language specification as English because all our data are in English. Moreover by grouping similar words, converting to lower case and showing frequency, we have a better representation of all the datasets present. The visual perception increases thereby. The minimum frequency is set to two. We did not consider a frequency of one because we are trying to group most frequently used words, and it is not set to five or some other number as we were missing on some important words in the slide by doing so. The frequency of words in slide is less than that of paper or videos. The maximum frequency have been set to 50. This was done after observing the pattern for 25, where we were missing many important words, and also by setting it at 75, where we were getting many unnecessary words. The parameter values considered are listed in Table~\ref{Table:TagCrowd}.
+
+\begin{table}
+\centering
+\caption{The parameters chosen for analysis with TagCrowd.}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Options} & \textbf{Settings} \\\hline
+\hline
+Language of text & English \\\hline
+Maximum number of words to show & 50 \\\hline
+Minimum frequency & 2 \\\hline
+Show frequency  & Yes \\\hline
+Group similar words & Yes  \\\hline
+Convert to lowercase & Yes  \\\hline
+
+\end{tabular}\label{Table:TagCrowd}
+\end{table}
+
+The term frequency–inverse document frequency (TF-IDF) statistic is used to represent how important a word is to a document or corpus. It is defined as follows.
+
+$$tfidf(t,d,D) = tf(t,d)*idf(t,D),$$
+
+where
+
+$$tf(t,d) = 0.5*(1+\frac{f_{t,d}}{\max\{f_{t',d} : t' \in d\}}),$$
+
+and
+
+$$idf(t,D) = \log\frac{N}{|\{d \in D : t \in d\}|}.$$
+
+Here, tf(t,d) refers to the number of times the term t occurs in document d, N refers to the number of documents in the corpus and N=|D|. As when the term is not present in a particular document will lead to division by 0, we take $1 + {d \in D : t \in d\}|}$. tf-idf is calculated as the product of tf(t,d) and idf(t,D). As the ratio of the idf's log function is always equal to or greater than one, we value of idf is greater than 0. As a term appears in more and more documents, the ratio inside the idf's logarithm function approaches 1, bringing the idf and tf-idf closer to 0.
+
+
+
+
+\section{Empirical Analysis}
+\subsection{Frequency Analysis}
+The TagCrowd data shows that the highest frequency for one set of data i.e., for the research literature, slide and presentation given. We have noticed that the highest frequency word is not the same for all three forms of data. Moreover we also notice that in videos some casual words which are spoken repeatedly by the author is shown in some cases. If we look at the TagCrowds created by the paper we see the terms `et' and `al' occurring frequently. The software cannot comprehend that it is actually `et al' meaning `and others'. The occupance of it is unique and found only in the papers. We find that it is not present in the other two. If we notice carefully through the three sets of TagCrowd data, we find the weightage of all the frequently used words are not the same. In set 1, we find that that SuperGenome does not have the same weightage in slide and video as it is in the paper. Likewise, in set 2, fragmentation is used more frequently in paper and while presenting, than in slide. The top 5 words used in published paper, presentd slides and verbal presentation are shown in ... Table~\ref{Table:Top5}.
+
+\begin{table}
+\centering
+\caption{The 5 most frequently used words.}
+\begin{tabular}{|c|l|l|l|}
+\hline
+\textbf{Serial No.} & \textbf{...} & \textbf{...} & \textbf{...} \\\hline
+\hline
+1 & & & \\\hline
+2 & & & \\\hline
+3 & & & \\\hline
+4 & & & \\\hline
+5 & & & \\\hline
+
+\end{tabular}\label{Table:Top5}
+\end{table}
+
+The TagCrowd dataset is not normalized. The length of all the three sets are different. Hence the weightage of the word is not weighted.
+Moreover, we have selected multi-authored papers. Hence assuming that different author made different contribution.
+It can be seen from Fig.~\ref{Figure:TagCrowd}, as only one author is speaking, the frequency of the most frequent word tells us about the domain of the speaker.
+
+
+\subsection{Contrast Mining}
+We have taken these thirty values and have found the cosine similarity for all the ten papers using the methods defined in above. The cosine similarity has been found within paper and slide, slide and video and paper and video. The thirty values thus obtained are represented in a tabular format in the adjacent page. We observe that the cosine similarity between paper and video is much higher than that obtained from slide and video as well as paper and slide. A close look at the values obtained as well as the graphical representation shows us that. The cosine similarity for slide and video as well as slide and paper tends to be lower. One apparent reason maybe, we have not included images. The explanation for most diagrams and figures were both presented verbally and written in the paper. Hence the anomaly. We also notice that for set 7, the cosine similarity drops and become nearly 0 for both slide and paper as well as slide and video. This can be explained by the fact, maybe the speaker for some reason did not make the slide, hence the speech as well as the video was not much similar to the slide. This is shown in Table~\ref{Table:Cosine}.
+
+\begin{table}
+\centering
+\caption{The cosine similarity values computed for pairwise documents (i.e., among the paper and presentation, video and presentation and paper and video).}
+\begin{tabular}{|c|l|l|l|}
+\hline
+\textbf{Serial No.} & \textbf{Paper-PPT} & \textbf{Video-PPT} & \textbf{Paper-Video} \\\hline
+\hline
+1 & 0.718 & 0.663 & 0.870 \\\hline
+2 & 0.705 & 0.565 & 0.880 \\\hline
+3 & 0.565 & 0.564 & 0.875 \\\hline
+4 & 0.687 & 0.662 & 0.872  \\\hline
+5 & 0.679 & 0.784 & 0.737 \\\hline
+6 & 0.615 & 0.404 & 0.822  \\\hline
+7 & 0.055 & 0.060 & 0.688  \\\hline
+8 & 0.580 & 0.501 & 0.702  \\\hline
+9 & 0.367 & 0.315 & 0.737  \\\hline
+10 & 0.892 & 0.899  & 0.835  \\\hline
+\end{tabular}\label{Table:Cosine}
+\end{table}
+
+We calculate correlation between cosine similarities of different pairs of forms (that is, between  Paper vs PPT and PPT vs Video, between   PPT vs Video and Video vs Paper and between  Paper vs PPT and Video vs Paper ) to  show whether and how strongly they are related. The Pearson correlation coefficient between two variables $X$ and $Y$ is given by
+
+$$Cor(X,Y) = \frac{Cov(X,Y)}{Std(X)Std(Y)},$$
+
+where $Cov()$ and $Std()$ denote the covariance and standard deviation, respectively. The values of correlation lie between -1 to 1. The trend as shown by the plot is shown in Fig.~\ref{Figure:Plot} in correlation shows a strong similarity between video and slide as well as paper and slide. It shows a value tending to 1, i.e. nearly correlated. This is because the slide and video as well as slide and paper shows a cosine similarity which is very near. We have also to take into consideration the following fact. The dataset was made by listening to video and converting it into text manually, as well as seeing the slide and manual conversion and document editing as per the requirement of the dataset. Hence, even though the chances of mistakes are less in case of slide and paper, there remains a high error probability during manual conversion of video. This error has been neglected during analysis of error.
+
+\begin{table}
+\centering
+\caption{ Correlation between the three types of documents taken in pair, via Peterson's Correlation.}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Pairs of document} & \textbf{Correlation} \\\hline
+\hline
+Paper vs PPT and PPT vs Video & 0.933432618 \\\hline
+Video vs PPT and Paper vs Video & 0.518246914  \\\hline
+Paper vs PPT and Paper vs Video & 0.684532761  \\\hline
+\end{tabular}\label{Table:TagCrowd}
+\end{table}
+
+
+\begin{figure*}[t]
+\centering
+\begin{tabular}{ccc}
+\includegraphics[width=0.45\columnwidth]{p1.eps} &
+\includegraphics[width=0.45\columnwidth]{s1.eps} &
+\includegraphics[width=0.45\columnwidth]{v1.eps} \\
+(a) & (b) & (c) \\
+\includegraphics[width=0.45\columnwidth]{p2.eps} &
+\includegraphics[width=0.45\columnwidth]{s2.eps} &
+\includegraphics[width=0.45\columnwidth]{v2.eps} \\
+(a) & (b) & (c) \\
+\includegraphics[width=0.45\columnwidth]{p3.eps} &
+\includegraphics[width=0.45\columnwidth]{s3.eps} &
+\includegraphics[width=0.45\columnwidth]{v3.eps} \\
+(a) & (b) & (c) \\
+\includegraphics[width=0.45\columnwidth]{p4.eps} &
+\includegraphics[width=0.45\columnwidth]{s4.eps} &
+\includegraphics[width=0.45\columnwidth]{v4.eps} \\
+(a) & (b) & (c) \\
+\includegraphics[width=0.45\columnwidth]{p5.eps} &
+\includegraphics[width=0.45\columnwidth]{s5.eps} &
+\includegraphics[width=0.45\columnwidth]{v5.eps} \\
+(a) & (b) & (c) \\
+\includegraphics[width=0.45\columnwidth]{p6.eps} &
+\includegraphics[width=0.45\columnwidth]{s6.eps} &
+\includegraphics[width=0.45\columnwidth]{v6.eps} \\
+(a) & (b) & (c) \\
+\includegraphics[width=0.45\columnwidth]{p7.eps} &
+\includegraphics[width=0.45\columnwidth]{s7.eps} &
+\includegraphics[width=0.45\columnwidth]{v7.eps} \\
+(a) & (b) & (c) \\
+\includegraphics[width=0.45\columnwidth]{p8.eps} &
+\includegraphics[width=0.45\columnwidth]{s8.eps} &
+\includegraphics[width=0.45\columnwidth]{v8.eps} \\
+(a) & (b) & (c) \\
+\includegraphics[width=0.45\columnwidth]{p9.eps} &
+\includegraphics[width=0.45\columnwidth]{s9.eps} &
+\includegraphics[width=0.45\columnwidth]{v9.eps} \\
+(a) & (b) & (c) \\
+\includegraphics[width=0.45\columnwidth]{p10.eps} &
+\includegraphics[width=0.45\columnwidth]{s10.eps} &
+\includegraphics[width=0.45\columnwidth]{v10.eps} \\
+(a) & (b) & (c) \\
+\end{tabular}
+\caption{...}
+\label{Figure:TagCrowd}
+\end{figure*}
+
+
+
+\begin{figure}
+\centering
+\includegraphics[height=1.8in]{Plot.eps}
+\caption{The above plot is a isualization of frequent words appearing in the in the forms of (a) published paper, (b) presented slides, and (c) verbal presentation.}\label{Figure:Plot}
+\end{figure}
+
+
+
+
+\section{Challenges}
+The biggest challenge was getting the datasets. For published literature, finding the conferences it was spoken to, as well as finding the presentation which was given in that conference, had been one of the biggest challenge. ISMB maintaining such a database helped us solve the problem.
+The next biggest challenge is converting the video, i.e. the presentation by the author, to a document vector for analysis. The difference in accent, speed of presentation have created some issues and hence the document vectors are not cent percent error free. These errors have been ignored while calculation. The errors are due to manual conversion of video to text.
+We have considered only multi-authored paper for dataset collection. Care has been taken such that no single authored paper is considered for analysis as it might lead to variation in result.
+
+
+
+
+
+
+\section{Conclusion}
+Here in the project we have manually made the dataset. Even though collecting dataset from paper might seem easy, manually listening and writing from videos can be quiet cumbersome. Moreover due to difference in accent, the error probability increases hence we had to hear each and every line a number of times before finalizing. This project is just one type of contrast mining. Now with this concept, we can proceed to many different analyses. We can compare the slide and videos for all the authors in a multi-authored paper and find their differences. Moreover, we can also find the trend for single authored papers. Moreover, we can use concepts of Crowdsourcing to collect a larger dataset for a more detailed analysis of trend. The result obtained for 10 sets leads us to conclude on the fact how the psychological thought process behind speaking on a paper published work. We see a tight correlation here suggesting that mostly authors of paper tends to speak and cover most of the parts covered in paper during a seminar presentation. The close correlation between the slides prepared and words spoken, or the paper written also gives us many reasons to ponder on. Hence, continuing this project can lead us to try much new type of data similarities and help find trend amongst data for further analysis. We can analyze the trend in single authored paper for understanding their trend, or maybe we might analyze each of the author separately for multi authored paper. If we continue in this direction, we have lots of new discoveries to make in the trend of the psychological thoughts behind presenting and writing a paper.
+
+
+
+
+
+%ACKNOWLEDGMENTS are optional
+\section{Acknowledgments}
+I would like to acknowledge the help of the following individuals without whom this work couldn't have been completed. I would firstly like to thank DR. ARINDAM BISWAS for giving us this work. It helped us gain knowledge and understanding on statistical contrast mining method. A debt of gratitude to my alma mater, Indian Institute of Engineering, Science and Technology, Shibpur and the library for its help.
+
+
+
+
+%
+% The following two commands are all you need in the
+% initial runs of your .tex file to
+% produce the bibliography for the citations in your paper.
+\bibliographystyle{abbrv}
+\bibliography{sigproc}  % sigproc.bib is the name of the Bibliography in this case
+
+
+\end{document}
